@@ -20,7 +20,8 @@ export type CallbackDoc = {
 
 export type PickerCallback = {
   action: string
-  docs: CallbackDoc[]
+  docs: CallbackDoc[],
+  token?:any;
 }
 
 export type authResult =  {

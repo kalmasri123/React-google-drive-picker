@@ -74,6 +74,7 @@ export default function useDrivePicker(): [
           : defaultScopes
         ).join(' '),
         callback: (tokenResponse: authResult) => {
+          config.callbackFunction({action:"authenticated",docs:[],token:tokenResponse})
           setAuthRes(tokenResponse)
           createPicker({ ...config, token: tokenResponse.access_token })
         },
